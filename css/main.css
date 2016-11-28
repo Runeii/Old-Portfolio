@@ -757,15 +757,22 @@ body {
     font-family:Calibre, Helvetica Neue, Helvetica, Arial, sans-serif;
     overflow-x: hidden;
 }
-
+a {
+  text-decoration: none;
+  border-bottom:0px solid rgb(238,109,67);
+  transform:border-bottom 0.5s;
+}
+a:hover {
+  border-bottom-width:2px;
+}
 a, .highlight {
     color:rgb(238,109,67);
 }
 
 section {
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
-    font-size: 3em;
+    font-size: 2em;
     padding: 1em;
     box-sizing: border-box;
 }
@@ -803,38 +810,26 @@ li[data-work]:hover {
     background-color:rgb(238,109,67);
     cursor: pointer;
 }
-
-.bounce {
-  animation: bounce 2s infinite;
+#code {
+  display:none;
 }
 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -moz-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  60% {
-    -moz-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
-}
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
 
+@media only screen and (min-width: 785px) {
+  section {
+    font-size:3em;
+    padding:1em;
+  }
+}
+@media only screen and (min-width: 1230px) {
+  .talk {
+    margin-top:1.5em;
+  }
 }
 
 @media print,
