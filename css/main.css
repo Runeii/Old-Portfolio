@@ -15,40 +15,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Calibre';
-  src: url('./calibre/regular/Calibre-Regular.eot') format('embedded-opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Calibre';
-  src:  url('./calibre/regular/Calibre-Regular.otf')  format('opentype'),
-        url('./calibre/regular/Calibre-Regular.woff')  format('woff'),
-        url('./calibre/regular/Calibre-Regular.ttf')  format('truetype'),
-        url('./calibre/regular/Calibre-Regular.svg#Calibre-Regular') format('svg');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Calibre';
-  src: url('./calibre/medium/Calibre-Medium.eot') format('embedded-opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Calibre';
-  src:  url('./calibre/medium/Calibre-Medium.otf')  format('opentype'),
-        url('./calibre/medium/Calibre-Medium.woff')  format('woff'),
-        url('./calibre/medium/Calibre-Medium.ttf')  format('truetype'),
-        url('./calibre/medium/Calibre-Medium.svg#Calibre-Medium') format('svg');
-  font-weight: 500;
-  font-style: normal;
-}
-
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /**
@@ -756,6 +722,7 @@ body {
     background-repeat: no-repeat;
     font-family:Calibre, Helvetica Neue, Helvetica, Arial, sans-serif;
     overflow-x: hidden;
+    font-weight:300;
 }
 a {
   text-decoration: none;
@@ -777,23 +744,17 @@ section {
     box-sizing: border-box;
 }
 
-section.code {
-    min-height:initial;
-    padding-top:0;
-}
-
-#entry {
-    padding:0;
-}
-#entry header {
-    height:100vh;
-    width:100vw;
+.flexbox section {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    flex-wrap: nowrap;
 }
-#entry header p {
-    margin-top:initial;
+
+.flexbox p {
+  margin: 0 0 1.5rem;
+}
+.flexbox .talk {
+  margin-top:auto;
 }
 
 li {
